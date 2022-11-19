@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "lavote-interpolator"
+name = "iso3166-enum"
 version = "0.1.0"
-description = "Track and interpolate LA County Election Returns."
+description = "Python enumerations for iso3166 country and region codes."
 authors = ["Brian Kohan <bckohan@gmail.com>"]
-license = "MIT"
-repository = "https://github.com/bckohan/lavote_interpolator"
+license = "UNLICENSE"
+repository = "https://github.com/bckohan/iso3166-enum"
 homepage = ""
 readme = "README.rst"
-keywords = ["enum",  "properties", "defines", "field", "django", "database"]
+keywords = ["enum",  "iso3166", "country", "region"]
 classifiers = [
     "Environment :: Console",
     "Operating System :: OS Independent",
@@ -17,6 +17,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Natural Language :: English",
     "Programming Language :: Python",
+    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
@@ -26,12 +27,23 @@ include = [
     "LICENSE",
 ]
 
+packages = [
+    { include = "iso3166" }
+]
+exclude = [
+    "iso3166/tests",
+    "iso3166/generate"
+]
+
+[tool.poetry.scripts]
+generate = 'iso3166.generate.generate_enums:main'
+
 [tool.poetry.dependencies]
-python = ">=3.8,<4.0"
-requests = "^2.28.1"
-ipython = "^8.6.0"
-python-dateutil = "^2.8.2"
-ipdb = "^0.13.9"
+python = ">=3.7,<4.0"
+enum-properties = "^1.3.1"
+
+[tool.poetry.group.dev.dependencies]
+Jinja2 = "^3.1.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

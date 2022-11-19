@@ -128,6 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# ADDITIONS
+poetry.lock
 iso3166/generate/*.zip
 .DS_Store
 .idea/
