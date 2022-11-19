@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 
 iso3166/generate/*.zip
+.DS_Store
+.idea/
