@@ -4,23 +4,23 @@
 .. |MIT license| image:: https://img.shields.io/badge/License-MIT-blue.svg
    :target: https://lbesson.mit-license.org/
 
-.. |PyPI version fury.io| image:: https://badge.fury.io/py/enum-properties.svg
-   :target: https://pypi.python.org/pypi/enum-properties/
+.. |PyPI version fury.io| image:: https://badge.fury.io/py/iso-enum.svg
+   :target: https://pypi.python.org/pypi/iso-enum/
 
-.. |PyPI pyversions| image:: https://img.shields.io/pypi/pyversions/enum-properties.svg
-   :target: https://pypi.python.org/pypi/enum-properties/
+.. |PyPI pyversions| image:: https://img.shields.io/pypi/pyversions/iso-enum.svg
+   :target: https://pypi.python.org/pypi/iso-enum/
 
-.. |PyPI status| image:: https://img.shields.io/pypi/status/enum-properties.svg
-   :target: https://pypi.python.org/pypi/enum-properties
+.. |PyPI status| image:: https://img.shields.io/pypi/status/iso-enum.svg
+   :target: https://pypi.python.org/pypi/iso-enum
 
-.. |Documentation Status| image:: https://readthedocs.org/projects/enum-properties/badge/?version=latest
-   :target: http://enum-properties.readthedocs.io/?badge=latest/
+.. |Documentation Status| image:: https://readthedocs.org/projects/iso-enum/badge/?version=latest
+   :target: http://iso-enum.readthedocs.io/?badge=latest/
 
-.. |Code Cov| image:: https://codecov.io/gh/bckohan/enum-properties/branch/main/graph/badge.svg?token=0IZOKN2DYL
-   :target: https://codecov.io/gh/bckohan/enum-properties
+.. |Code Cov| image:: https://codecov.io/gh/bckohan/iso-enum/branch/main/graph/badge.svg?token=0IZOKN2DYL
+   :target: https://codecov.io/gh/bckohan/iso-enum
 
-.. |Test Status| image:: https://github.com/bckohan/enum-properties/workflows/test/badge.svg
-   :target: https://github.com/bckohan/enum-properties/actions
+.. |Test Status| image:: https://github.com/bckohan/iso-enum/workflows/test/badge.svg
+   :target: https://github.com/bckohan/iso-enum/actions
 
 
 ISO Enum
