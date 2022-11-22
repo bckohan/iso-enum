@@ -2,7 +2,6 @@
 .. _Pylint: https://www.pylint.org/
 .. _isort: https://pycqa.github.io/isort/
 .. _mypy: http://mypy-lang.org/
-.. _django-pytest: https://pytest-django.readthedocs.io/en/latest/
 .. _pytest: https://docs.pytest.org/en/stable/
 .. _Sphinx: https://www.sphinx-doc.org/en/master/
 .. _readthedocs: https://readthedocs.org/
@@ -26,8 +25,7 @@ contact me_.
 Installation
 ------------
 
-`enum-properties` uses Poetry_ for environment, package and dependency
-management.
+`iso-enum` uses Poetry_ for environment, package and dependency management.
 
 .. code-block::
 
@@ -36,7 +34,7 @@ management.
 Documentation
 -------------
 
-`enum-properties` documentation is generated using Sphinx_ with the
+`iso-enum` documentation is generated using Sphinx_ with the
 readthedocs_ theme. Any new feature PRs must provide updated documentation for
 the features added. To build the docs run:
 
@@ -49,17 +47,17 @@ the features added. To build the docs run:
 Static Analysis
 ---------------
 
-`enum-properties` uses Pylint_ for python linting. Header imports are also
-standardized using isort_. Static type checking is not done because the code
-simply relies too heavily on metaprogramming for it to be useful. Before any
+`iso-enum` uses Pylint_ for python linting. Header imports are also
+standardized using isort_. Static type checking is done using mypy_. Before any
 PR is accepted the following must be run, and static analysis tools should not
 produce any errors or warnings. Disabling certain errors or warnings where
 justified is acceptable:
 
 .. code-block::
 
-    poetry run isort enum_properties
-    poetry run pylint enum_properties
+    poetry run isort iso_enum
+    poetry run pylint iso_enum
+    poetry run mypy iso_enum
     poetry run doc8 -q doc
     poetry check
     poetry run pip check
@@ -70,8 +68,8 @@ justified is acceptable:
 Running Tests
 -------------
 
-`enum-properties` is setup to use pytest_ to run unit tests. All the tests are
-housed in enum_properties/tests/tests.py. Before a PR is accepted, all tests
+`iso-enum` is setup to use pytest_ to run unit tests. All the tests are
+housed in iso_enum/tests/tests.py. Before a PR is accepted, all tests
 must be passing and the code coverage must be at 100%. A small number of
 exempted error handling branches are acceptable.
 
@@ -92,6 +90,6 @@ test_properties_and_symmetry test you would do:
 
 .. code-block::
 
-    poetry run pytest enum_properties/tests/tests.py::TestEnums
-    poetry run pytest enum_properties/tests/tests.py::TestEnums::test_properties_and_symmetry
+    poetry run pytest iso_enum/tests/tests.py::TestISOLanguage
+    poetry run pytest iso_enum/tests/tests.py::TestISOLanguage::pickle
 

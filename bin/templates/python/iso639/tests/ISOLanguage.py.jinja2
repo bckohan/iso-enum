@@ -1,0 +1,52 @@
+from unittest import TestCase
+from iso_enum.iso639.ISOLanguage import ISOLanguage
+
+
+class TestISOLanguage(TestCase):
+
+    def test_value(self):
+        {% for language in languages %}
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}.value, {{ language.identifier|quote }})
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}, ISOLanguage({{ language.identifier|quote }}))
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}, ISOLanguage({{ language.identifier|upper|quote }}))
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}.code, {{ language.identifier|quote }})
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}.identifier, {{ language.identifier|quote }})
+        self.assertEqual(str(ISOLanguage.{{ language.identifier|upper }}), {{ language.identifier|quote }})
+        {% endfor %}
+
+    def test_english(self):
+        {% for language in languages %}
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}.en, {{ language.english.0|quote }})
+        {% for en in language.english %}self.assertEqual(ISOLanguage.{{ language.identifier|upper }}.english[{{ loop.index0 }}], {{ en|quote }})
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}, {{ en|quote }})
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}, {{ en|upper|quote }})
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}, ISOLanguage({{ en|quote }}))
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}, ISOLanguage({{ en|upper|quote }}))
+        {% endfor %}
+        {% endfor %}
+
+    def test_french(self):
+        {% for language in languages %}
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}.fr, {{ language.french.0|quote }})
+        {% for fr in language.french %}self.assertEqual(ISOLanguage.{{ language.identifier|upper }}.french[{{ loop.index0 }}], {{ fr|quote }})
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}, {{ fr|quote }})
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}, {{ fr|upper|quote }})
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}, ISOLanguage({{ fr|quote }}))
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}, ISOLanguage({{ fr|upper|quote }}))
+        {% endfor %}
+        {% endfor %}
+
+    def test_indigenous(self):
+        {% for language in languages %}
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}.ind, {{ language.indigenous.0|quote }})
+        {% for ind in language.indigenous %}self.assertEqual(ISOLanguage.{{ language.identifier|upper }}.indigenous[{{ loop.index0 }}], {{ ind|quote }})
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}, {{ ind|quote }})
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}, {{ ind|upper|quote }})
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}, ISOLanguage({{ ind|quote }}))
+        self.assertEqual(ISOLanguage.{{ language.identifier|upper }}, ISOLanguage({{ ind|upper|quote }}))
+        {% endfor %}
+        {% endfor %}
+
+    def test_pickle(self):
+        pass
+
