@@ -8,18 +8,19 @@ from enum_properties import (
 
 class ISOCountry(
     EnumProperties,
-    s('alpha2', case_fold=True),
-    s('alpha3', case_fold=True),
-    p('independent'),
-    s('short_name', case_fold=True),
-    s('full_name', case_fold=True)
+    s('alpha2', case_fold=True),  # type: ignore
+    s('alpha3', case_fold=True),  # type: ignore
+    p('independent'),  # type: ignore
+    s('short_name', case_fold=True),  # type: ignore
+    s('full_name', case_fold=True)  # type: ignore
 ):
     """
     An enumeration for ISO 3166-1 Country codes.
     """
-
-    {% for country in countries %}{% if country.status == 'officially-assigned' %}{{ country.alpha_2_code|upper }} = {{ country.numeric_code }}, {{ country.alpha_2_code|quote }}, {{ country.alpha_3_code|quote }}, {{ country.independent }}, {{ country.short_name_en|quote }}, {% if country.full_name_en %}{{ country.full_name_en|quote }}{% else %}{{ country.short_name_en|quote }}{% endif %}{%- endif %}
-    {% endfor %}# pylint: disable=C0303
+    # pylint: disable=C0303
+    {%- for country in countries %}{% if country.status == 'officially-assigned' %}
+    {{ country.alpha_2_code|upper }} = {{ country.numeric_code }}, {{ country.alpha_2_code|quote }}, {{ country.alpha_3_code|quote }}, {{ country.independent }}, {{ country.short_name_en|quote }}, {% if country.full_name_en %}{{ country.full_name_en|quote }}{% else %}{{ country.short_name_en|quote }}{% endif %}{%- endif -%}
+    {%- endfor %}
 
     @property
     def numeric(self):

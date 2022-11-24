@@ -23,7 +23,7 @@ class TestISOCountry(TestCase):
 
     def test_independent(self):
         {% for country in countries %}
-        {% if country.status == 'officially-assigned' %}
+        {% if country.status == 'officially-assigned' -%}
         self.assertEqual(ISOCountry.{{ country.alpha_2_code|upper }}.independent, {{ country.independent }})
         {%- endif %}
         {%- endfor %}

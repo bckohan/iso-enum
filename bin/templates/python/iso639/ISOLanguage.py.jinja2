@@ -7,9 +7,9 @@ from enum_properties import (
 
 class ISOLanguage(
     EnumProperties,
-    s('english', case_fold=True),
-    s('french', case_fold=True),
-    s('indigenous', case_fold=True)
+    s('english', case_fold=True),  # type: ignore
+    s('french', case_fold=True),  # type: ignore
+    s('indigenous', case_fold=True)  # type: ignore
 ):
     """
     An enumeration for ISO 639-1 language codes.

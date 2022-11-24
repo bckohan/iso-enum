@@ -1,4 +1,5 @@
 from unittest import TestCase
+
 from iso_enum.iso3166.ISOCountry import ISOCountry
 
 
@@ -2344,425 +2345,237 @@ class TestISOCountry(TestCase):
     def test_independent(self):
         
         
-        
         self.assertEqual(ISOCountry.AD.independent, True)
-        
         self.assertEqual(ISOCountry.AE.independent, True)
-        
         self.assertEqual(ISOCountry.AF.independent, True)
-        
         self.assertEqual(ISOCountry.AG.independent, True)
         
-        
         self.assertEqual(ISOCountry.AI.independent, False)
-        
         self.assertEqual(ISOCountry.AL.independent, True)
-        
         self.assertEqual(ISOCountry.AM.independent, True)
-        
         
         self.assertEqual(ISOCountry.AO.independent, True)
         
-        
         self.assertEqual(ISOCountry.AQ.independent, False)
-        
         self.assertEqual(ISOCountry.AR.independent, True)
-        
         self.assertEqual(ISOCountry.AS.independent, False)
-        
         self.assertEqual(ISOCountry.AT.independent, True)
-        
         self.assertEqual(ISOCountry.AU.independent, True)
-        
         self.assertEqual(ISOCountry.AW.independent, False)
-        
         self.assertEqual(ISOCountry.AX.independent, False)
-        
         self.assertEqual(ISOCountry.AZ.independent, True)
-        
         self.assertEqual(ISOCountry.BA.independent, True)
-        
         self.assertEqual(ISOCountry.BB.independent, True)
-        
         self.assertEqual(ISOCountry.BD.independent, True)
-        
         self.assertEqual(ISOCountry.BE.independent, True)
-        
         self.assertEqual(ISOCountry.BF.independent, True)
-        
         self.assertEqual(ISOCountry.BG.independent, True)
-        
         self.assertEqual(ISOCountry.BH.independent, True)
-        
         self.assertEqual(ISOCountry.BI.independent, True)
-        
         self.assertEqual(ISOCountry.BJ.independent, True)
-        
         self.assertEqual(ISOCountry.BL.independent, False)
-        
         self.assertEqual(ISOCountry.BM.independent, False)
-        
         self.assertEqual(ISOCountry.BN.independent, True)
-        
         self.assertEqual(ISOCountry.BO.independent, True)
         
-        
         self.assertEqual(ISOCountry.BQ.independent, False)
-        
         self.assertEqual(ISOCountry.BR.independent, True)
-        
         self.assertEqual(ISOCountry.BS.independent, True)
-        
         self.assertEqual(ISOCountry.BT.independent, True)
         
-        
         self.assertEqual(ISOCountry.BV.independent, False)
-        
         self.assertEqual(ISOCountry.BW.independent, True)
         
         
-        
         self.assertEqual(ISOCountry.BY.independent, True)
-        
         self.assertEqual(ISOCountry.BZ.independent, True)
-        
         self.assertEqual(ISOCountry.CA.independent, True)
-        
         self.assertEqual(ISOCountry.CC.independent, False)
-        
         self.assertEqual(ISOCountry.CD.independent, True)
-        
         self.assertEqual(ISOCountry.CF.independent, True)
-        
         self.assertEqual(ISOCountry.CG.independent, True)
-        
         self.assertEqual(ISOCountry.CH.independent, True)
-        
         self.assertEqual(ISOCountry.CI.independent, True)
-        
         self.assertEqual(ISOCountry.CK.independent, False)
-        
         self.assertEqual(ISOCountry.CL.independent, True)
-        
         self.assertEqual(ISOCountry.CM.independent, True)
-        
         self.assertEqual(ISOCountry.CN.independent, True)
-        
         self.assertEqual(ISOCountry.CO.independent, True)
-        
         
         
         self.assertEqual(ISOCountry.CR.independent, True)
         
         
         
-        
         self.assertEqual(ISOCountry.CU.independent, True)
-        
         self.assertEqual(ISOCountry.CV.independent, True)
-        
         self.assertEqual(ISOCountry.CW.independent, False)
-        
         self.assertEqual(ISOCountry.CX.independent, False)
-        
         self.assertEqual(ISOCountry.CY.independent, True)
-        
         self.assertEqual(ISOCountry.CZ.independent, True)
-        
         
         self.assertEqual(ISOCountry.DE.independent, True)
         
-        
         self.assertEqual(ISOCountry.DJ.independent, True)
-        
         self.assertEqual(ISOCountry.DK.independent, True)
-        
         self.assertEqual(ISOCountry.DM.independent, True)
-        
         self.assertEqual(ISOCountry.DO.independent, True)
-        
         
         
         self.assertEqual(ISOCountry.DZ.independent, True)
         
-        
         self.assertEqual(ISOCountry.EC.independent, True)
-        
         self.assertEqual(ISOCountry.EE.independent, True)
         
-        
         self.assertEqual(ISOCountry.EG.independent, True)
-        
         self.assertEqual(ISOCountry.EH.independent, False)
         
         
-        
         self.assertEqual(ISOCountry.ER.independent, True)
-        
         self.assertEqual(ISOCountry.ES.independent, True)
-        
         self.assertEqual(ISOCountry.ET.independent, True)
         
         
         
         
-        
         self.assertEqual(ISOCountry.FI.independent, True)
-        
         self.assertEqual(ISOCountry.FJ.independent, True)
-        
         self.assertEqual(ISOCountry.FK.independent, False)
         
-        
         self.assertEqual(ISOCountry.FM.independent, True)
-        
         self.assertEqual(ISOCountry.FO.independent, False)
-        
         
         self.assertEqual(ISOCountry.FR.independent, True)
         
-        
         self.assertEqual(ISOCountry.GA.independent, True)
-        
         self.assertEqual(ISOCountry.GB.independent, True)
-        
         
         self.assertEqual(ISOCountry.GD.independent, True)
         
-        
         self.assertEqual(ISOCountry.GE.independent, True)
-        
         self.assertEqual(ISOCountry.GF.independent, False)
-        
         self.assertEqual(ISOCountry.GG.independent, False)
-        
         self.assertEqual(ISOCountry.GH.independent, True)
-        
         self.assertEqual(ISOCountry.GI.independent, False)
-        
         self.assertEqual(ISOCountry.GL.independent, False)
-        
         self.assertEqual(ISOCountry.GM.independent, True)
-        
         self.assertEqual(ISOCountry.GN.independent, True)
-        
         self.assertEqual(ISOCountry.GP.independent, False)
-        
         self.assertEqual(ISOCountry.GQ.independent, True)
-        
         self.assertEqual(ISOCountry.GR.independent, True)
-        
         self.assertEqual(ISOCountry.GS.independent, False)
-        
         self.assertEqual(ISOCountry.GT.independent, True)
-        
         self.assertEqual(ISOCountry.GU.independent, False)
-        
         self.assertEqual(ISOCountry.GW.independent, True)
-        
         self.assertEqual(ISOCountry.GY.independent, True)
-        
         self.assertEqual(ISOCountry.HK.independent, False)
-        
         self.assertEqual(ISOCountry.HM.independent, False)
-        
         self.assertEqual(ISOCountry.HN.independent, True)
-        
         self.assertEqual(ISOCountry.HR.independent, True)
-        
         self.assertEqual(ISOCountry.HT.independent, True)
-        
         self.assertEqual(ISOCountry.HU.independent, True)
         
         
         
-        
         self.assertEqual(ISOCountry.ID.independent, True)
-        
         self.assertEqual(ISOCountry.IE.independent, True)
-        
         self.assertEqual(ISOCountry.IL.independent, True)
-        
         self.assertEqual(ISOCountry.IM.independent, False)
-        
         self.assertEqual(ISOCountry.IN.independent, True)
-        
         self.assertEqual(ISOCountry.IO.independent, False)
-        
         self.assertEqual(ISOCountry.IQ.independent, True)
-        
         self.assertEqual(ISOCountry.IR.independent, True)
-        
         self.assertEqual(ISOCountry.IS.independent, True)
-        
         self.assertEqual(ISOCountry.IT.independent, True)
         
-        
         self.assertEqual(ISOCountry.JE.independent, False)
-        
         self.assertEqual(ISOCountry.JM.independent, True)
-        
         self.assertEqual(ISOCountry.JO.independent, True)
-        
         self.assertEqual(ISOCountry.JP.independent, True)
         
-        
         self.assertEqual(ISOCountry.KE.independent, True)
-        
         self.assertEqual(ISOCountry.KG.independent, True)
-        
         self.assertEqual(ISOCountry.KH.independent, True)
-        
         self.assertEqual(ISOCountry.KI.independent, True)
-        
         self.assertEqual(ISOCountry.KM.independent, True)
-        
         self.assertEqual(ISOCountry.KN.independent, True)
-        
         self.assertEqual(ISOCountry.KP.independent, True)
-        
         self.assertEqual(ISOCountry.KR.independent, True)
-        
         self.assertEqual(ISOCountry.KW.independent, True)
-        
         self.assertEqual(ISOCountry.KY.independent, False)
-        
         self.assertEqual(ISOCountry.KZ.independent, True)
-        
         self.assertEqual(ISOCountry.LA.independent, True)
-        
         self.assertEqual(ISOCountry.LB.independent, True)
-        
         self.assertEqual(ISOCountry.LC.independent, True)
         
-        
         self.assertEqual(ISOCountry.LI.independent, True)
-        
         self.assertEqual(ISOCountry.LK.independent, True)
-        
         self.assertEqual(ISOCountry.LR.independent, True)
-        
         self.assertEqual(ISOCountry.LS.independent, True)
-        
         self.assertEqual(ISOCountry.LT.independent, True)
-        
         self.assertEqual(ISOCountry.LU.independent, True)
-        
         self.assertEqual(ISOCountry.LV.independent, True)
-        
         self.assertEqual(ISOCountry.LY.independent, True)
-        
         self.assertEqual(ISOCountry.MA.independent, True)
-        
         self.assertEqual(ISOCountry.MC.independent, True)
-        
         self.assertEqual(ISOCountry.MD.independent, True)
-        
         self.assertEqual(ISOCountry.ME.independent, True)
-        
         self.assertEqual(ISOCountry.MF.independent, False)
-        
         self.assertEqual(ISOCountry.MG.independent, True)
-        
         self.assertEqual(ISOCountry.MH.independent, True)
         
-        
         self.assertEqual(ISOCountry.MK.independent, True)
-        
         self.assertEqual(ISOCountry.ML.independent, True)
-        
         self.assertEqual(ISOCountry.MM.independent, True)
-        
         self.assertEqual(ISOCountry.MN.independent, True)
-        
         self.assertEqual(ISOCountry.MO.independent, False)
-        
         self.assertEqual(ISOCountry.MP.independent, False)
-        
         self.assertEqual(ISOCountry.MQ.independent, False)
-        
         self.assertEqual(ISOCountry.MR.independent, True)
-        
         self.assertEqual(ISOCountry.MS.independent, False)
-        
         self.assertEqual(ISOCountry.MT.independent, True)
-        
         self.assertEqual(ISOCountry.MU.independent, True)
-        
         self.assertEqual(ISOCountry.MV.independent, True)
-        
         self.assertEqual(ISOCountry.MW.independent, True)
-        
         self.assertEqual(ISOCountry.MX.independent, True)
-        
         self.assertEqual(ISOCountry.MY.independent, True)
-        
         self.assertEqual(ISOCountry.MZ.independent, True)
-        
         self.assertEqual(ISOCountry.NA.independent, True)
-        
         self.assertEqual(ISOCountry.NC.independent, False)
-        
         self.assertEqual(ISOCountry.NE.independent, True)
-        
         self.assertEqual(ISOCountry.NF.independent, False)
-        
         self.assertEqual(ISOCountry.NG.independent, True)
         
-        
         self.assertEqual(ISOCountry.NI.independent, True)
-        
         self.assertEqual(ISOCountry.NL.independent, True)
-        
         self.assertEqual(ISOCountry.NO.independent, True)
-        
         self.assertEqual(ISOCountry.NP.independent, True)
-        
         
         self.assertEqual(ISOCountry.NR.independent, True)
         
-        
         self.assertEqual(ISOCountry.NU.independent, False)
-        
         self.assertEqual(ISOCountry.NZ.independent, True)
         
-        
         self.assertEqual(ISOCountry.OM.independent, True)
-        
         self.assertEqual(ISOCountry.PA.independent, True)
         
-        
         self.assertEqual(ISOCountry.PE.independent, True)
-        
         self.assertEqual(ISOCountry.PF.independent, False)
-        
         self.assertEqual(ISOCountry.PG.independent, True)
-        
         self.assertEqual(ISOCountry.PH.independent, True)
         
-        
         self.assertEqual(ISOCountry.PK.independent, True)
-        
         self.assertEqual(ISOCountry.PL.independent, True)
-        
         self.assertEqual(ISOCountry.PM.independent, False)
-        
         self.assertEqual(ISOCountry.PN.independent, False)
-        
         self.assertEqual(ISOCountry.PR.independent, False)
-        
         self.assertEqual(ISOCountry.PS.independent, False)
-        
         self.assertEqual(ISOCountry.PT.independent, True)
         
-        
         self.assertEqual(ISOCountry.PW.independent, True)
-        
         self.assertEqual(ISOCountry.PY.independent, True)
         
-        
         self.assertEqual(ISOCountry.QA.independent, True)
-        
         
         
         
@@ -2773,126 +2586,70 @@ class TestISOCountry(TestCase):
         
         
         
-        
         self.assertEqual(ISOCountry.RO.independent, True)
         
-        
         self.assertEqual(ISOCountry.RS.independent, True)
-        
         self.assertEqual(ISOCountry.RU.independent, True)
-        
         self.assertEqual(ISOCountry.RW.independent, True)
-        
         self.assertEqual(ISOCountry.SA.independent, True)
-        
         self.assertEqual(ISOCountry.SB.independent, True)
-        
         self.assertEqual(ISOCountry.SC.independent, True)
-        
         self.assertEqual(ISOCountry.SD.independent, True)
-        
         self.assertEqual(ISOCountry.SE.independent, True)
         
-        
         self.assertEqual(ISOCountry.SG.independent, True)
-        
         self.assertEqual(ISOCountry.SH.independent, False)
-        
         self.assertEqual(ISOCountry.SI.independent, True)
-        
         self.assertEqual(ISOCountry.SJ.independent, False)
-        
         self.assertEqual(ISOCountry.SK.independent, True)
         
-        
         self.assertEqual(ISOCountry.SL.independent, True)
-        
         self.assertEqual(ISOCountry.SM.independent, True)
-        
         self.assertEqual(ISOCountry.SN.independent, True)
-        
         self.assertEqual(ISOCountry.SO.independent, True)
-        
         self.assertEqual(ISOCountry.SR.independent, True)
-        
         self.assertEqual(ISOCountry.SS.independent, True)
-        
         self.assertEqual(ISOCountry.ST.independent, True)
         
-        
         self.assertEqual(ISOCountry.SV.independent, True)
-        
         self.assertEqual(ISOCountry.SX.independent, False)
-        
         self.assertEqual(ISOCountry.SY.independent, True)
-        
         self.assertEqual(ISOCountry.SZ.independent, True)
         
-        
         self.assertEqual(ISOCountry.TC.independent, False)
-        
         self.assertEqual(ISOCountry.TD.independent, True)
-        
         self.assertEqual(ISOCountry.TF.independent, False)
-        
         self.assertEqual(ISOCountry.TG.independent, True)
-        
         self.assertEqual(ISOCountry.TH.independent, True)
-        
         self.assertEqual(ISOCountry.TJ.independent, True)
-        
         self.assertEqual(ISOCountry.TK.independent, False)
-        
         self.assertEqual(ISOCountry.TL.independent, True)
-        
         self.assertEqual(ISOCountry.TM.independent, True)
-        
         self.assertEqual(ISOCountry.TN.independent, True)
-        
         self.assertEqual(ISOCountry.TO.independent, True)
         
-        
         self.assertEqual(ISOCountry.TR.independent, True)
-        
         self.assertEqual(ISOCountry.TT.independent, True)
-        
         self.assertEqual(ISOCountry.TV.independent, True)
-        
         self.assertEqual(ISOCountry.TW.independent, False)
-        
         self.assertEqual(ISOCountry.TZ.independent, True)
-        
         self.assertEqual(ISOCountry.UA.independent, True)
-        
         self.assertEqual(ISOCountry.UG.independent, True)
-        
         
         self.assertEqual(ISOCountry.UM.independent, False)
         
-        
         self.assertEqual(ISOCountry.US.independent, True)
-        
         self.assertEqual(ISOCountry.UY.independent, True)
-        
         self.assertEqual(ISOCountry.UZ.independent, True)
-        
         self.assertEqual(ISOCountry.VA.independent, True)
-        
         self.assertEqual(ISOCountry.VC.independent, True)
         
-        
         self.assertEqual(ISOCountry.VE.independent, True)
-        
         self.assertEqual(ISOCountry.VG.independent, False)
-        
         self.assertEqual(ISOCountry.VI.independent, False)
-        
         self.assertEqual(ISOCountry.VN.independent, True)
-        
         self.assertEqual(ISOCountry.VU.independent, True)
-        
         self.assertEqual(ISOCountry.WF.independent, False)
-        
         
         
         
@@ -2900,16 +2657,11 @@ class TestISOCountry(TestCase):
         self.assertEqual(ISOCountry.WS.independent, True)
         
         
-        
         self.assertEqual(ISOCountry.YE.independent, True)
-        
         self.assertEqual(ISOCountry.YT.independent, False)
         
         
-        
         self.assertEqual(ISOCountry.ZA.independent, True)
-        
         self.assertEqual(ISOCountry.ZM.independent, True)
-        
         
         self.assertEqual(ISOCountry.ZW.independent, True)

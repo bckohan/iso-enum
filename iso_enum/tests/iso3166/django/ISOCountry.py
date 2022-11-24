@@ -1,4 +1,5 @@
 from unittest import TestCase
+
 from iso_enum.iso3166.django.ISOCountry import ISOCountry as DjangoISOCountry
 
 
@@ -3242,573 +3243,252 @@ class TestDjangoISOCountry(TestCase):
 
     def test_independent(self):
         
-        
-        
         self.assertEqual(DjangoISOCountry.AD.independent, True)
-        
         self.assertEqual(DjangoISOCountry.AE.independent, True)
-        
         self.assertEqual(DjangoISOCountry.AF.independent, True)
-        
         self.assertEqual(DjangoISOCountry.AG.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.AI.independent, False)
-        
         self.assertEqual(DjangoISOCountry.AL.independent, True)
-        
         self.assertEqual(DjangoISOCountry.AM.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.AO.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.AQ.independent, False)
-        
         self.assertEqual(DjangoISOCountry.AR.independent, True)
-        
         self.assertEqual(DjangoISOCountry.AS.independent, False)
-        
         self.assertEqual(DjangoISOCountry.AT.independent, True)
-        
         self.assertEqual(DjangoISOCountry.AU.independent, True)
-        
         self.assertEqual(DjangoISOCountry.AW.independent, False)
-        
         self.assertEqual(DjangoISOCountry.AX.independent, False)
-        
         self.assertEqual(DjangoISOCountry.AZ.independent, True)
-        
         self.assertEqual(DjangoISOCountry.BA.independent, True)
-        
         self.assertEqual(DjangoISOCountry.BB.independent, True)
-        
         self.assertEqual(DjangoISOCountry.BD.independent, True)
-        
         self.assertEqual(DjangoISOCountry.BE.independent, True)
-        
         self.assertEqual(DjangoISOCountry.BF.independent, True)
-        
         self.assertEqual(DjangoISOCountry.BG.independent, True)
-        
         self.assertEqual(DjangoISOCountry.BH.independent, True)
-        
         self.assertEqual(DjangoISOCountry.BI.independent, True)
-        
         self.assertEqual(DjangoISOCountry.BJ.independent, True)
-        
         self.assertEqual(DjangoISOCountry.BL.independent, False)
-        
         self.assertEqual(DjangoISOCountry.BM.independent, False)
-        
         self.assertEqual(DjangoISOCountry.BN.independent, True)
-        
         self.assertEqual(DjangoISOCountry.BO.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.BQ.independent, False)
-        
         self.assertEqual(DjangoISOCountry.BR.independent, True)
-        
         self.assertEqual(DjangoISOCountry.BS.independent, True)
-        
         self.assertEqual(DjangoISOCountry.BT.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.BV.independent, False)
-        
         self.assertEqual(DjangoISOCountry.BW.independent, True)
-        
-        
-        
         self.assertEqual(DjangoISOCountry.BY.independent, True)
-        
         self.assertEqual(DjangoISOCountry.BZ.independent, True)
-        
         self.assertEqual(DjangoISOCountry.CA.independent, True)
-        
         self.assertEqual(DjangoISOCountry.CC.independent, False)
-        
         self.assertEqual(DjangoISOCountry.CD.independent, True)
-        
         self.assertEqual(DjangoISOCountry.CF.independent, True)
-        
         self.assertEqual(DjangoISOCountry.CG.independent, True)
-        
         self.assertEqual(DjangoISOCountry.CH.independent, True)
-        
         self.assertEqual(DjangoISOCountry.CI.independent, True)
-        
         self.assertEqual(DjangoISOCountry.CK.independent, False)
-        
         self.assertEqual(DjangoISOCountry.CL.independent, True)
-        
         self.assertEqual(DjangoISOCountry.CM.independent, True)
-        
         self.assertEqual(DjangoISOCountry.CN.independent, True)
-        
         self.assertEqual(DjangoISOCountry.CO.independent, True)
-        
-        
-        
         self.assertEqual(DjangoISOCountry.CR.independent, True)
-        
-        
-        
-        
         self.assertEqual(DjangoISOCountry.CU.independent, True)
-        
         self.assertEqual(DjangoISOCountry.CV.independent, True)
-        
         self.assertEqual(DjangoISOCountry.CW.independent, False)
-        
         self.assertEqual(DjangoISOCountry.CX.independent, False)
-        
         self.assertEqual(DjangoISOCountry.CY.independent, True)
-        
         self.assertEqual(DjangoISOCountry.CZ.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.DE.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.DJ.independent, True)
-        
         self.assertEqual(DjangoISOCountry.DK.independent, True)
-        
         self.assertEqual(DjangoISOCountry.DM.independent, True)
-        
         self.assertEqual(DjangoISOCountry.DO.independent, True)
-        
-        
-        
         self.assertEqual(DjangoISOCountry.DZ.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.EC.independent, True)
-        
         self.assertEqual(DjangoISOCountry.EE.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.EG.independent, True)
-        
         self.assertEqual(DjangoISOCountry.EH.independent, False)
-        
-        
-        
         self.assertEqual(DjangoISOCountry.ER.independent, True)
-        
         self.assertEqual(DjangoISOCountry.ES.independent, True)
-        
         self.assertEqual(DjangoISOCountry.ET.independent, True)
-        
-        
-        
-        
-        
         self.assertEqual(DjangoISOCountry.FI.independent, True)
-        
         self.assertEqual(DjangoISOCountry.FJ.independent, True)
-        
         self.assertEqual(DjangoISOCountry.FK.independent, False)
-        
-        
         self.assertEqual(DjangoISOCountry.FM.independent, True)
-        
         self.assertEqual(DjangoISOCountry.FO.independent, False)
-        
-        
         self.assertEqual(DjangoISOCountry.FR.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.GA.independent, True)
-        
         self.assertEqual(DjangoISOCountry.GB.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.GD.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.GE.independent, True)
-        
         self.assertEqual(DjangoISOCountry.GF.independent, False)
-        
         self.assertEqual(DjangoISOCountry.GG.independent, False)
-        
         self.assertEqual(DjangoISOCountry.GH.independent, True)
-        
         self.assertEqual(DjangoISOCountry.GI.independent, False)
-        
         self.assertEqual(DjangoISOCountry.GL.independent, False)
-        
         self.assertEqual(DjangoISOCountry.GM.independent, True)
-        
         self.assertEqual(DjangoISOCountry.GN.independent, True)
-        
         self.assertEqual(DjangoISOCountry.GP.independent, False)
-        
         self.assertEqual(DjangoISOCountry.GQ.independent, True)
-        
         self.assertEqual(DjangoISOCountry.GR.independent, True)
-        
         self.assertEqual(DjangoISOCountry.GS.independent, False)
-        
         self.assertEqual(DjangoISOCountry.GT.independent, True)
-        
         self.assertEqual(DjangoISOCountry.GU.independent, False)
-        
         self.assertEqual(DjangoISOCountry.GW.independent, True)
-        
         self.assertEqual(DjangoISOCountry.GY.independent, True)
-        
         self.assertEqual(DjangoISOCountry.HK.independent, False)
-        
         self.assertEqual(DjangoISOCountry.HM.independent, False)
-        
         self.assertEqual(DjangoISOCountry.HN.independent, True)
-        
         self.assertEqual(DjangoISOCountry.HR.independent, True)
-        
         self.assertEqual(DjangoISOCountry.HT.independent, True)
-        
         self.assertEqual(DjangoISOCountry.HU.independent, True)
-        
-        
-        
-        
         self.assertEqual(DjangoISOCountry.ID.independent, True)
-        
         self.assertEqual(DjangoISOCountry.IE.independent, True)
-        
         self.assertEqual(DjangoISOCountry.IL.independent, True)
-        
         self.assertEqual(DjangoISOCountry.IM.independent, False)
-        
         self.assertEqual(DjangoISOCountry.IN.independent, True)
-        
         self.assertEqual(DjangoISOCountry.IO.independent, False)
-        
         self.assertEqual(DjangoISOCountry.IQ.independent, True)
-        
         self.assertEqual(DjangoISOCountry.IR.independent, True)
-        
         self.assertEqual(DjangoISOCountry.IS.independent, True)
-        
         self.assertEqual(DjangoISOCountry.IT.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.JE.independent, False)
-        
         self.assertEqual(DjangoISOCountry.JM.independent, True)
-        
         self.assertEqual(DjangoISOCountry.JO.independent, True)
-        
         self.assertEqual(DjangoISOCountry.JP.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.KE.independent, True)
-        
         self.assertEqual(DjangoISOCountry.KG.independent, True)
-        
         self.assertEqual(DjangoISOCountry.KH.independent, True)
-        
         self.assertEqual(DjangoISOCountry.KI.independent, True)
-        
         self.assertEqual(DjangoISOCountry.KM.independent, True)
-        
         self.assertEqual(DjangoISOCountry.KN.independent, True)
-        
         self.assertEqual(DjangoISOCountry.KP.independent, True)
-        
         self.assertEqual(DjangoISOCountry.KR.independent, True)
-        
         self.assertEqual(DjangoISOCountry.KW.independent, True)
-        
         self.assertEqual(DjangoISOCountry.KY.independent, False)
-        
         self.assertEqual(DjangoISOCountry.KZ.independent, True)
-        
         self.assertEqual(DjangoISOCountry.LA.independent, True)
-        
         self.assertEqual(DjangoISOCountry.LB.independent, True)
-        
         self.assertEqual(DjangoISOCountry.LC.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.LI.independent, True)
-        
         self.assertEqual(DjangoISOCountry.LK.independent, True)
-        
         self.assertEqual(DjangoISOCountry.LR.independent, True)
-        
         self.assertEqual(DjangoISOCountry.LS.independent, True)
-        
         self.assertEqual(DjangoISOCountry.LT.independent, True)
-        
         self.assertEqual(DjangoISOCountry.LU.independent, True)
-        
         self.assertEqual(DjangoISOCountry.LV.independent, True)
-        
         self.assertEqual(DjangoISOCountry.LY.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MA.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MC.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MD.independent, True)
-        
         self.assertEqual(DjangoISOCountry.ME.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MF.independent, False)
-        
         self.assertEqual(DjangoISOCountry.MG.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MH.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.MK.independent, True)
-        
         self.assertEqual(DjangoISOCountry.ML.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MM.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MN.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MO.independent, False)
-        
         self.assertEqual(DjangoISOCountry.MP.independent, False)
-        
         self.assertEqual(DjangoISOCountry.MQ.independent, False)
-        
         self.assertEqual(DjangoISOCountry.MR.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MS.independent, False)
-        
         self.assertEqual(DjangoISOCountry.MT.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MU.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MV.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MW.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MX.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MY.independent, True)
-        
         self.assertEqual(DjangoISOCountry.MZ.independent, True)
-        
         self.assertEqual(DjangoISOCountry.NA.independent, True)
-        
         self.assertEqual(DjangoISOCountry.NC.independent, False)
-        
         self.assertEqual(DjangoISOCountry.NE.independent, True)
-        
         self.assertEqual(DjangoISOCountry.NF.independent, False)
-        
         self.assertEqual(DjangoISOCountry.NG.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.NI.independent, True)
-        
         self.assertEqual(DjangoISOCountry.NL.independent, True)
-        
         self.assertEqual(DjangoISOCountry.NO.independent, True)
-        
         self.assertEqual(DjangoISOCountry.NP.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.NR.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.NU.independent, False)
-        
         self.assertEqual(DjangoISOCountry.NZ.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.OM.independent, True)
-        
         self.assertEqual(DjangoISOCountry.PA.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.PE.independent, True)
-        
         self.assertEqual(DjangoISOCountry.PF.independent, False)
-        
         self.assertEqual(DjangoISOCountry.PG.independent, True)
-        
         self.assertEqual(DjangoISOCountry.PH.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.PK.independent, True)
-        
         self.assertEqual(DjangoISOCountry.PL.independent, True)
-        
         self.assertEqual(DjangoISOCountry.PM.independent, False)
-        
         self.assertEqual(DjangoISOCountry.PN.independent, False)
-        
         self.assertEqual(DjangoISOCountry.PR.independent, False)
-        
         self.assertEqual(DjangoISOCountry.PS.independent, False)
-        
         self.assertEqual(DjangoISOCountry.PT.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.PW.independent, True)
-        
         self.assertEqual(DjangoISOCountry.PY.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.QA.independent, True)
-        
-        
-        
-        
         self.assertEqual(DjangoISOCountry.RE.independent, False)
-        
-        
-        
-        
-        
-        
-        
         self.assertEqual(DjangoISOCountry.RO.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.RS.independent, True)
-        
         self.assertEqual(DjangoISOCountry.RU.independent, True)
-        
         self.assertEqual(DjangoISOCountry.RW.independent, True)
-        
         self.assertEqual(DjangoISOCountry.SA.independent, True)
-        
         self.assertEqual(DjangoISOCountry.SB.independent, True)
-        
         self.assertEqual(DjangoISOCountry.SC.independent, True)
-        
         self.assertEqual(DjangoISOCountry.SD.independent, True)
-        
         self.assertEqual(DjangoISOCountry.SE.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.SG.independent, True)
-        
         self.assertEqual(DjangoISOCountry.SH.independent, False)
-        
         self.assertEqual(DjangoISOCountry.SI.independent, True)
-        
         self.assertEqual(DjangoISOCountry.SJ.independent, False)
-        
         self.assertEqual(DjangoISOCountry.SK.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.SL.independent, True)
-        
         self.assertEqual(DjangoISOCountry.SM.independent, True)
-        
         self.assertEqual(DjangoISOCountry.SN.independent, True)
-        
         self.assertEqual(DjangoISOCountry.SO.independent, True)
-        
         self.assertEqual(DjangoISOCountry.SR.independent, True)
-        
         self.assertEqual(DjangoISOCountry.SS.independent, True)
-        
         self.assertEqual(DjangoISOCountry.ST.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.SV.independent, True)
-        
         self.assertEqual(DjangoISOCountry.SX.independent, False)
-        
         self.assertEqual(DjangoISOCountry.SY.independent, True)
-        
         self.assertEqual(DjangoISOCountry.SZ.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.TC.independent, False)
-        
         self.assertEqual(DjangoISOCountry.TD.independent, True)
-        
         self.assertEqual(DjangoISOCountry.TF.independent, False)
-        
         self.assertEqual(DjangoISOCountry.TG.independent, True)
-        
         self.assertEqual(DjangoISOCountry.TH.independent, True)
-        
         self.assertEqual(DjangoISOCountry.TJ.independent, True)
-        
         self.assertEqual(DjangoISOCountry.TK.independent, False)
-        
         self.assertEqual(DjangoISOCountry.TL.independent, True)
-        
         self.assertEqual(DjangoISOCountry.TM.independent, True)
-        
         self.assertEqual(DjangoISOCountry.TN.independent, True)
-        
         self.assertEqual(DjangoISOCountry.TO.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.TR.independent, True)
-        
         self.assertEqual(DjangoISOCountry.TT.independent, True)
-        
         self.assertEqual(DjangoISOCountry.TV.independent, True)
-        
         self.assertEqual(DjangoISOCountry.TW.independent, False)
-        
         self.assertEqual(DjangoISOCountry.TZ.independent, True)
-        
         self.assertEqual(DjangoISOCountry.UA.independent, True)
-        
         self.assertEqual(DjangoISOCountry.UG.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.UM.independent, False)
-        
-        
         self.assertEqual(DjangoISOCountry.US.independent, True)
-        
         self.assertEqual(DjangoISOCountry.UY.independent, True)
-        
         self.assertEqual(DjangoISOCountry.UZ.independent, True)
-        
         self.assertEqual(DjangoISOCountry.VA.independent, True)
-        
         self.assertEqual(DjangoISOCountry.VC.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.VE.independent, True)
-        
         self.assertEqual(DjangoISOCountry.VG.independent, False)
-        
         self.assertEqual(DjangoISOCountry.VI.independent, False)
-        
         self.assertEqual(DjangoISOCountry.VN.independent, True)
-        
         self.assertEqual(DjangoISOCountry.VU.independent, True)
-        
         self.assertEqual(DjangoISOCountry.WF.independent, False)
-        
-        
-        
-        
-        
         self.assertEqual(DjangoISOCountry.WS.independent, True)
-        
-        
-        
         self.assertEqual(DjangoISOCountry.YE.independent, True)
-        
         self.assertEqual(DjangoISOCountry.YT.independent, False)
-        
-        
-        
         self.assertEqual(DjangoISOCountry.ZA.independent, True)
-        
         self.assertEqual(DjangoISOCountry.ZM.independent, True)
-        
-        
         self.assertEqual(DjangoISOCountry.ZW.independent, True)
