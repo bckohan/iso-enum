@@ -11,6 +11,7 @@ from jinja2 import (
     select_autoescape
 )
 from copy import copy
+from io import StringIO
 
 python_templates = Path(__file__).parent / 'templates' / 'python'
 python_src = Path(__file__).parent.parent / 'iso_enum'
@@ -25,7 +26,7 @@ python_test = python_src / 'tests'
 standards = Path(__file__).parent.parent / 'standards'
 
 DEFAULT_ISO3166 = str(
-    standards / 'iso_country_code_ALL_csv.zip.gpg'
+    standards / 'iso_country_code_ALL_csv.zip'
 )
 DEFAULT_ISO639 = str(
     standards / 'iso639-1.csv'
@@ -44,6 +45,33 @@ ISO639_PYTHON_TEMPLATES = [
     }
 ]
 
+ISO3166_PYTHON_TEMPLATES = [
+    {
+        'tmpl': 'iso3166/ISOCountry.py.jinja2',
+        'dest': python_src / 'iso3166' / 'ISOCountry.py',
+        'test': 'iso3166/tests/ISOCountry.py.jinja2',
+        'test_dest': python_test / 'iso3166' / 'ISOCountry.py',
+        'extra_ctx': {
+            "quote_char": '"'  # todo - not honored
+        }
+    },
+    {
+        'tmpl': 'iso3166/django/ISOCountry.py.jinja2',
+        'dest': python_src / 'iso3166' / 'django' / 'ISOCountry.py',
+        'test': 'iso3166/tests/django/ISOCountry.py.jinja2',
+        'test_dest': python_test / 'iso3166' / 'django' / 'ISOCountry.py',
+        'extra_ctx': {
+            "quote_char": '"'
+        }
+    }
+]
+
+
+def to_bool(variable):
+    if isinstance(variable, str):
+        return variable.lower() in ['yes', 'y', 'true']
+    return bool(variable)
+
 
 def exec_command(*args):
     ret = subprocess.run(args, capture_output=True)
@@ -55,7 +83,7 @@ def exec_command(*args):
 
 
 python_context = {
-    'quote_char': "'"
+    'quote_char': '"'
 }
 python_environment = Environment(
     loader=FileSystemLoader(python_templates),
@@ -112,6 +140,14 @@ def main():
              f'Default: {DEFAULT_ISO4217}'
     )
 
+    parser.add_argument(
+        '--no-clean',
+        dest='no_clean',
+        action='store_true',
+        default=False,
+        help=f'Do not clean up any temporary artifacts.'
+    )
+
     args = parser.parse_args()
 
     iso639 = getattr(args, 'iso639', None)
@@ -123,9 +159,10 @@ def main():
 
     generate_iso639(iso639)
     generate_iso4217(iso4217)
-    #generate_iso3166(iso3166)
+    generate_iso3166(iso3166)
 
-    cleanup()
+    if getattr(parser, 'no_clean', False):
+        cleanup()
 
 
 def generate_iso639(file_path):
@@ -148,25 +185,7 @@ def generate_iso639(file_path):
                 ]
             })
 
-    from pprint import pprint
-    pprint(iso639_context['languages'])
-
-    for template in ISO639_PYTHON_TEMPLATES:
-        tmpl = python_environment.get_template(template['tmpl'])
-        context = copy(python_context)
-        context.update(template['extra_ctx'])
-        context.update(iso639_context)
-        output_dir = Path(template['dest']).parent
-        os.makedirs(output_dir, exist_ok=True)
-        print(f'Writing {template["dest"]}...')
-        with open(template['dest'], 'w') as output:
-            output.write(tmpl.render(context))
-
-        if 'test' in template:
-            print(f'Writing {template["test_dest"]}...')
-            tmpl = python_environment.get_template(template['test'])
-            with open(template['test_dest'], 'w') as output:
-                output.write(tmpl.render(context))
+    render_templates(iso639_context, ISO639_PYTHON_TEMPLATES)
 
 
 def generate_iso3166(file_path):
@@ -181,13 +200,50 @@ def generate_iso3166(file_path):
             iso3166_encrypted
         )
 
+    iso3166_context = {
+        'countries': []
+    }
+
     with ZipFile(file_path, 'r') as csv_pkg:
-        pass
-        #pprint(csv_pkg.namelist())
+        csv_reader = csv.DictReader(
+            StringIO(csv_pkg.read('country-codes.csv').decode())
+        )
+        for row in csv_reader:
+            iso3166_context['countries'].append({
+                **{
+                    col: val for col, val in row.items()
+                    if col not in {'independent', 'numeric_code'}
+                },
+                'independent': to_bool(row['independent']),
+                'numeric_code': int(row['numeric_code']) if row['numeric_code'] else None
+            })
+
+    render_templates(iso3166_context, ISO3166_PYTHON_TEMPLATES)
 
 
 def generate_iso4217(file_path):
     pass
+
+
+def render_templates(render_context, templates):
+
+    for template in templates:
+        tmpl = python_environment.get_template(template['tmpl'])
+        context = copy(python_context)
+        context.update(template['extra_ctx'])
+        context.update(render_context)
+        output_dir = Path(template['dest']).parent
+        os.makedirs(output_dir, exist_ok=True)
+        print(f'Writing {template["dest"]}...')
+        with open(template['dest'], 'w') as output:
+            output.write(tmpl.render(context))
+
+        if 'test' in template:
+            print(f'Writing {template["test_dest"]}...')
+            tmpl = python_environment.get_template(template['test'])
+            os.makedirs(Path(template["test_dest"]).parent, exist_ok=True)
+            with open(template['test_dest'], 'w') as output:
+                output.write(tmpl.render(context))
 
 
 def cleanup():

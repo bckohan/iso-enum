@@ -133,3 +133,5 @@ poetry.lock
 iso3166/generate/*.zip
 .DS_Store
 .idea/
+standards/iso_country_code_ALL_csv.zip
+standards/iso_country_code_ALL_csv

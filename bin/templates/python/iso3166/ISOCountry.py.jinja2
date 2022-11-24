@@ -1,0 +1,34 @@
+"""The standard enum type for ISO 3166-1 common countrys"""
+from enum_properties import (
+    EnumProperties,
+    s,
+    p
+)
+
+
+class ISOCountry(
+    EnumProperties,
+    s('alpha2', case_fold=True),
+    s('alpha3', case_fold=True),
+    p('independent'),
+    s('short_name', case_fold=True),
+    s('full_name', case_fold=True)
+):
+    """
+    An enumeration for ISO 3166-1 Country codes.
+    """
+
+    {% for country in countries %}{% if country.status == 'officially-assigned' %}{{ country.alpha_2_code|upper }} = {{ country.numeric_code }}, {{ country.alpha_2_code|quote }}, {{ country.alpha_3_code|quote }}, {{ country.independent }}, {{ country.short_name_en|quote }}, {% if country.full_name_en %}{{ country.full_name_en|quote }}{% else %}{{ country.short_name_en|quote }}{% endif %}{%- endif %}
+    {% endfor %}# pylint: disable=C0303
+
+    @property
+    def numeric(self):
+        """An alias for the alpha-2 code"""
+        return self.value
+
+    def __str__(self):
+        """
+        The string representation of this enum is its alpha-2 country code
+        """
+        return self.alpha2
+

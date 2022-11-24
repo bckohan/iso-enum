@@ -1,21 +1,24 @@
 """The standard enum type for ISO 639-1 common languages"""
-from enum_properties import EnumProperties, s
+from enum_properties import (
+    EnumProperties,
+    s
+)
 
 
 class ISOLanguage(
     EnumProperties,
-    s('english', case_fold=True),  # type: ignore
-    s('french', case_fold=True),  # type: ignore
-    s('indigenous', case_fold=True)  # type: ignore
+    s('english', case_fold=True),
+    s('french', case_fold=True),
+    s('indigenous', case_fold=True)
 ):
     """
     An enumeration for ISO 639-1 language codes.
     """
 
-    AB = 'ab', ['Abkhazian', 'Abkhaz', ], ['abkhaze', 'abkhazien', ], ['apsua byszwa', ]
-    OM = 'om', ['Afan Oromo', 'Oromo', 'Galla', ], ['oromo', 'afan oromo', 'galla', ], ['(afan) oromo', ]
-    AA = 'aa', ['Afar', ], ['afar', ], ['afar', ]
-    AF = 'af', ['Afrikaans', ], ['afrikaans', ], ['Afrikaans', ]
+    AB = "ab", ["Abkhazian", "Abkhaz", ], ["abkhaze", "abkhazien", ], ["apsua byszwa", ]
+    OM = "om", ["Afan Oromo", "Oromo", "Galla", ], ["oromo", "afan oromo", "galla", ], ["(afan) oromo", ]
+    AA = "aa", ["Afar", ], ["afar", ], ["afar", ]
+    AF = "af", ["Afrikaans", ], ["afrikaans", ], ["Afrikaans", ]
     # pylint: disable=C0303
     @property
     def en(self):

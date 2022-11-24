@@ -1,0 +1,39 @@
+"""The standard enum type for ISO 3166-1 common countrys"""
+from enum_properties import (
+    s,
+    p
+)
+from django_enum import TextChoices
+#from django.utils.translation import gettext as _
+
+
+class ISOCountry(
+    TextChoices,
+    s('numeric'),
+    s('alpha3', case_fold=True),
+    p('independent'),
+    s('full_name', case_fold=True)
+):
+    """
+    An enumeration for ISO 3166-1 Country codes.
+    """
+
+    _symmetric_builtins_ = [s('label', case_fold=True)]
+
+    {% for country in countries %}{% if country.status == 'officially-assigned' %}{{ country.alpha_2_code|upper }} = {{ country.alpha_2_code|quote }}, {{ country.short_name_en|quote }}, {{ country.numeric_code }}, {{ country.alpha_3_code|quote }}, {{ country.independent }}, {% if country.full_name_en %}{{ country.full_name_en|quote }}{% else %}{{ country.short_name_en|quote }}{% endif %}{%- endif %}
+    {% endfor %}# pylint: disable=C0303
+
+    @property
+    def alpha2(self):
+        return self.value
+
+    @property
+    def short_name(self):
+        return self.label
+
+    def __str__(self):
+        """
+        The string representation of this enum is its alpha-2 country code
+        """
+        return self.value
+

@@ -1,0 +1,29 @@
+from unittest import TestCase
+from iso_enum.iso3166.ISOCountry import ISOCountry
+
+
+class TestISOCountry(TestCase):
+
+    def test_equality(self):
+        {% for country in countries %}
+        {% if country.status == 'officially-assigned' %}
+        self.assertEqual(ISOCountry.{{ country.alpha_2_code|upper }}, {{ country.numeric_code }})
+        self.assertEqual(ISOCountry.{{ country.alpha_2_code|upper }}, {{ country.alpha_2_code|quote }})
+        self.assertEqual(ISOCountry.{{ country.alpha_2_code|upper }}, {{ country.alpha_3_code|quote }})
+        self.assertEqual(ISOCountry.{{ country.alpha_2_code|upper }}, {{ country.short_name_en|quote }})
+        self.assertEqual(ISOCountry.{{ country.alpha_2_code|upper }}, {{ country.short_name_en|upper|quote }})
+        {% if country.full_name_en -%}
+        self.assertEqual(ISOCountry.{{ country.alpha_2_code|upper }}, {{ country.full_name_en|quote }})
+        self.assertEqual(ISOCountry.{{ country.alpha_2_code|upper }}, {{ country.full_name_en|upper|quote }})
+        self.assertEqual(str(ISOCountry.{{ country.alpha_2_code|upper }}), {{ country.alpha_2_code|quote }})
+        self.assertEqual(ISOCountry.{{ country.alpha_2_code|upper }}.numeric, {{ country.numeric_code }})
+        {%- endif %}
+        {%- endif %}
+        {%- endfor %}
+
+    def test_independent(self):
+        {% for country in countries %}
+        {% if country.status == 'officially-assigned' %}
+        self.assertEqual(ISOCountry.{{ country.alpha_2_code|upper }}.independent, {{ country.independent }})
+        {%- endif %}
+        {%- endfor %}

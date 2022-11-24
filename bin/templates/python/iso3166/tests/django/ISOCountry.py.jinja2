@@ -1,0 +1,32 @@
+from unittest import TestCase
+from iso_enum.iso3166.django.ISOCountry import ISOCountry as DjangoISOCountry
+
+
+class TestDjangoISOCountry(TestCase):
+
+    def test_equality(self):
+        {% for country in countries %}
+        {% if country.status == 'officially-assigned' %}
+        self.assertEqual(DjangoISOCountry.{{ country.alpha_2_code|upper }}, {{ country.numeric_code }})
+        self.assertEqual(DjangoISOCountry.{{ country.alpha_2_code|upper }}.label, {{ country.short_name_en|quote }})
+        self.assertEqual(DjangoISOCountry.{{ country.alpha_2_code|upper }}.alpha2, {{ country.alpha_2_code|quote }})
+        self.assertEqual(DjangoISOCountry.{{ country.alpha_2_code|upper }}.short_name, {{ country.short_name_en|quote }})
+        self.assertEqual(DjangoISOCountry.{{ country.alpha_2_code|upper }}, DjangoISOCountry({{ country.short_name_en|quote }}))
+        self.assertEqual(DjangoISOCountry.{{ country.alpha_2_code|upper }}, {{ country.alpha_2_code|quote }})
+        self.assertEqual(DjangoISOCountry.{{ country.alpha_2_code|upper }}, {{ country.alpha_3_code|quote }})
+        self.assertEqual(DjangoISOCountry.{{ country.alpha_2_code|upper }}, {{ country.short_name_en|quote }})
+        self.assertEqual(DjangoISOCountry.{{ country.alpha_2_code|upper }}, {{ country.short_name_en|upper|quote }})
+        self.assertEqual(str(DjangoISOCountry.{{ country.alpha_2_code|upper }}), {{ country.alpha_2_code|quote }})
+        {% if country.full_name_en -%}
+        self.assertEqual(DjangoISOCountry.{{ country.alpha_2_code|upper }}, {{ country.full_name_en|quote }})
+        self.assertEqual(DjangoISOCountry.{{ country.alpha_2_code|upper }}, {{ country.full_name_en|upper|quote }})
+        {%- endif %}
+        {%- endif %}
+        {%- endfor %}
+
+    def test_independent(self):
+        {% for country in countries %}
+        {% if country.status == 'officially-assigned' %}
+        self.assertEqual(DjangoISOCountry.{{ country.alpha_2_code|upper }}.independent, {{ country.independent }})
+        {%- endif %}
+        {%- endfor %}
